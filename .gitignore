@@ -1,0 +1,4 @@
+.DS_Store
+*.log
+.image-slots.state.json
+.omelette/

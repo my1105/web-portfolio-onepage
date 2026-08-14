@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>山田 太郎|ボイストレーナー 公式サイト</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ボイストレーナー山田太郎の公式サイト。プロフィール、経歴・実績、活動内容、レッスンのご案内。体験レッスンのお申し込みはLINEから。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+<script src="./image-slot.js"></script>
+</helmet>
+
+<header class="site-header {{ headerClass }}">
+  <div class="site-header__inner">
+    <a href="#top" class="site-logo" onclick="{{ closeMenu }}">山田 太郎</a>
+    <button type="button" class="nav-toggle" aria-label="メニュー" aria-expanded="{{ menuOpen }}" aria-controls="site-nav" onclick="{{ toggleMenu }}">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <a href="#profile" onclick="{{ closeMenu }}">プロフィール</a>
+      <a href="#career" onclick="{{ closeMenu }}">経歴・実績</a>
+      <a href="#activity" onclick="{{ closeMenu }}">活動内容</a>
+      <a href="#service" onclick="{{ closeMenu }}">サービス</a>
+      <a href="#contact" onclick="{{ closeMenu }}">お問い合わせ</a>
+      <a href="{{ lineUrl }}" class="btn-line btn-line--nav site-nav__line">LINEで相談</a>
+    </nav>
+    <a href="{{ lineUrl }}" class="btn-line btn-line--nav site-header__line">LINEで相談</a>
+  </div>
+</header>
+<div class="header-spacer" aria-hidden="true"></div>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="hero__eyebrow">Voice Trainer</p>
+        <h1 class="hero__title">声が変わると、<br>毎日が変わる。</h1>
+        <p class="hero__lead">ボイストレーナーの山田太郎です。歌はもちろん、話し声や人前でのスピーチまで。一人ひとりの声に合わせたレッスンで、あなたの「伝わる声」を育てます。(仮の紹介文です)</p>
+        <div class="hero__actions">
+          <a href="{{ lineUrl }}" class="btn-line btn-line--lg">LINEで体験レッスンに申し込む</a>
+          <a href="#service" class="btn-outline-light">サービスを見る</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <div class="hero__frame">
+          <div class="hero__frame-border"></div>
+          <img
+            class="hero__photo"
+            src="./images/hero-portrait.png"
+            alt="ボイストレーナー 山田太郎"
+            width="900"
+            height="1200"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile -->
+  <section id="profile" class="profile">
+    <div class="profile__inner">
+      <div class="profile__heading">
+        <p class="section-label">PROFILE</p>
+        <h2 class="section-title">プロフィール</h2>
+      </div>
+      <div class="profile__body">
+        <p>山田 太郎(やまだ たろう)。音楽大学声楽科を卒業後、劇団・合唱団での活動を経てボイストレーナーとして独立。現在は東京を拠点に、対面・オンラインでレッスンを行っています。(仮のプロフィール文です)</p>
+        <p>「声の悩みは、正しい練習で必ず変わる」をモットーに、初心者からプロ志望まで幅広く指導しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career -->
+  <section id="career" class="career">
+    <p class="section-label">CAREER</p>
+    <h2 class="section-title section-title--spaced">経歴・実績</h2>
+    <div class="career__list">
+      <sc-for list="{{ career }}" as="c" hint-placeholder-count="5">
+        <div class="career__item">
+          <div class="career__year">{{ c.year }}</div>
+          <div class="career__text">{{ c.text }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <p class="note">※ 経歴は仮の内容です。実際の経歴に差し替えます。</p>
+  </section>
+
+  <!-- Activity -->
+  <section id="activity" class="activity">
+    <div class="activity__inner">
+      <p class="section-label">ACTIVITY</p>
+      <h2 class="section-title section-title--spaced">現在の活動内容</h2>
+      <div class="activity__grid">
+        <sc-for list="{{ activities }}" as="a" hint-placeholder-count="3">
+          <div class="activity__card">
+            <div class="activity__media">
+              <img src="{{ a.image }}" alt="{{ a.title }}" width="640" height="480" loading="lazy">
+            </div>
+            <div class="activity__body">
+              <div class="activity__num">{{ a.num }}</div>
+              <h3 class="activity__title">{{ a.title }}</h3>
+              <p class="activity__text">{{ a.text }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service -->
+  <section id="service" class="service">
+    <p class="section-label">SERVICE</p>
+    <h2 class="section-title section-title--spaced">サービス案内</h2>
+    <div class="service__grid">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
+        <div class="service__card">
+          <h3 class="service__title">{{ s.title }}</h3>
+          <div class="service__price">{{ s.price }}<span class="service__unit"> {{ s.unit }}</span></div>
+          <p class="service__text">{{ s.text }}</p>
+          <a href="{{ lineUrl }}" class="btn-outline-sm">LINEで申し込む</a>
+        </div>
+      </sc-for>
+    </div>
+    <p class="note">※ 料金・内容は仮のものです。</p>
+  </section>
+
+  <!-- YouTube / SNS -->
+  <section id="sns" class="sns">
+    <div class="sns__inner">
+      <div class="sns__youtube">
+        <p class="section-label">YOUTUBE</p>
+        <h2 class="section-title">YouTube</h2>
+        <div class="sns__embed">
+          <iframe src="{{ youtubeEmbed }}" title="YouTube" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+        <p class="sns__channel"><a href="{{ youtubeUrl }}">チャンネルを見る →</a></p>
+      </div>
+      <div class="sns__links">
+        <p class="section-label">SNS</p>
+        <h2 class="section-title">SNS</h2>
+        <div class="sns__list">
+          <a href="{{ instagramUrl }}" class="sns__item">
+            <span class="sns__item-name">Instagram</span>
+            <span class="sns__item-desc">レッスン風景・日々の発信</span>
+          </a>
+          <a href="{{ lineUrl }}" class="sns__item">
+            <span class="sns__item-name">公式LINE</span>
+            <span class="sns__item-desc">お知らせ・予約受付</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <p class="section-label">CONTACT</p>
+    <h2 class="section-title section-title--contact">お問い合わせ</h2>
+    <p class="contact__lead">レッスンのお申し込み・ご相談は、公式LINEからお気軽にどうぞ。メールでのお問い合わせも受け付けています。</p>
+    <div class="contact__actions">
+      <a href="{{ lineUrl }}" class="btn-line btn-line--contact">LINEで問い合わせる</a>
+      <a href="{{ mailtoHref }}" class="btn-outline">メールを送る</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>© 2026 Taro Yamada</span>
+    <span class="site-footer__links">
+      <a href="{{ youtubeUrl }}">YouTube</a>
+      <a href="{{ instagramUrl }}">Instagram</a>
+      <a href="{{ lineUrl }}">LINE</a>
+    </span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;lineUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://lin.ee/xxxxxxx&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;リンク設定&quot;},&quot;youtubeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.youtube.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;リンク設定&quot;},&quot;youtubeId&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;リンク設定&quot;},&quot;instagramUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.instagram.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;リンク設定&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;info@example.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;リンク設定&quot;}}">
+class Component extends DCLogic {
+  state = { menuOpen: false };
+
+  renderVals() {
+    const lineUrl = this.props.lineUrl ?? "https://lin.ee/xxxxxxx";
+    const youtubeUrl = this.props.youtubeUrl ?? "https://www.youtube.com/";
+    const youtubeId = this.props.youtubeId ?? "";
+    const menuOpen = !!this.state.menuOpen;
+    return {
+      lineUrl, youtubeUrl,
+      instagramUrl: this.props.instagramUrl ?? "https://www.instagram.com/",
+      mailtoHref: "mailto:" + (this.props.email ?? "info@example.com"),
+      youtubeEmbed: youtubeId ? "https://www.youtube.com/embed/" + youtubeId : "about:blank",
+      menuOpen: menuOpen ? "true" : "false",
+      headerClass: menuOpen ? "is-open" : "",
+      toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }),
+      closeMenu: () => { if (this.state.menuOpen) this.setState({ menuOpen: false }); },
+      career: [
+        { year: "2010年", text: "音楽大学 声楽科 卒業(仮)" },
+        { year: "2012年", text: "劇団に所属し、舞台・ミュージカルに出演(仮)" },
+        { year: "2016年", text: "ボイストレーナーとして独立、個人レッスンを開始(仮)" },
+        { year: "2020年", text: "オンラインレッスンを開始。累計指導人数500名を突破(仮)" },
+        { year: "2024年", text: "YouTubeチャンネル登録者1万人達成(仮)" },
+      ],
+      activities: [
+        { num: "01", title: "個人レッスン", text: "対面・オンラインでのマンツーマンレッスン。歌唱・話し声のどちらにも対応します。(仮)", image: "./images/activity-lesson.png" },
+        { num: "02", title: "セミナー・講座", text: "企業・学校向けの発声セミナーや、グループ講座を開催しています。(仮)", image: "./images/activity-seminar.png" },
+        { num: "03", title: "YouTube発信", text: "自宅でできるボイストレーニングの方法を動画で発信しています。(仮)", image: "./images/activity-youtube.png" },
+      ],
+      services: [
+        { title: "体験レッスン", price: "¥3,000", unit: "/ 60分", text: "初めての方向け。現在の声の状態を確認し、練習の方向性をご提案します。" },
+        { title: "個人レッスン", price: "¥6,000", unit: "/ 60分", text: "マンツーマンの継続レッスン。対面(東京)またはオンラインをお選びいただけます。" },
+        { title: "月謝コース", price: "¥20,000", unit: "/ 月4回", text: "しっかり上達したい方向けの月謝制コース。LINEでの練習サポート付き。" },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
