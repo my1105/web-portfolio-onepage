@@ -1,228 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MAISON｜インナーケア</title>
+  <meta name="description" content="医師発想のインナーケア食品。知的労働の毎日に寄り添う、ハイエンドなサプリメントブランド MAISON。">
+  <meta name="theme-color" content="#f3eee6">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MAISON">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="MAISON｜インナーケア">
+  <meta property="og:description" content="医師発想のインナーケア食品。知的労働の毎日に寄り添う、ハイエンドなサプリメントブランド MAISON。">
+  <meta property="og:image" content="./images/product-hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
-<x-dc>
-<helmet>
-<title>山田 太郎|ボイストレーナー 公式サイト</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ボイストレーナー山田太郎の公式サイト。プロフィール、経歴・実績、活動内容、レッスンのご案内。体験レッスンのお申し込みはLINEから。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./styles.css">
-<script src="./image-slot.js"></script>
-</helmet>
-
-<header class="site-header {{ headerClass }}">
+<body data-page="home">
+<a class="skip-link" href="#main">本文へスキップ</a>
+<header class="site-header">
   <div class="site-header__inner">
-    <a href="#top" class="site-logo" onclick="{{ closeMenu }}">山田 太郎</a>
-    <button type="button" class="nav-toggle" aria-label="メニュー" aria-expanded="{{ menuOpen }}" aria-controls="site-nav" onclick="{{ toggleMenu }}">
+    <a href="./index.html" class="site-logo">
+      <span class="site-logo__mark">MAISON</span>
+      <span class="site-logo__jp">INNER CARE</span>
+    </a>
+    <button type="button" class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle__bar"></span>
       <span class="nav-toggle__bar"></span>
       <span class="nav-toggle__bar"></span>
     </button>
-    <nav id="site-nav" class="site-nav">
-      <a href="#profile" onclick="{{ closeMenu }}">プロフィール</a>
-      <a href="#career" onclick="{{ closeMenu }}">経歴・実績</a>
-      <a href="#activity" onclick="{{ closeMenu }}">活動内容</a>
-      <a href="#service" onclick="{{ closeMenu }}">サービス</a>
-      <a href="#contact" onclick="{{ closeMenu }}">お問い合わせ</a>
-      <a href="{{ lineUrl }}" class="btn-line btn-line--nav site-nav__line">LINEで相談</a>
+    <nav id="site-nav" class="site-nav" aria-label="メインメニュー">
+      <a href="./brand.html" data-nav="brand">ブランド</a>
+      <a href="./product.html" data-nav="product">製品</a>
+      <a href="./formula.html" data-nav="formula">成分</a>
+      <a href="./ritual.html" data-nav="ritual">使い方</a>
+      <a href="./voices.html" data-nav="voices">声</a>
+      <a href="./faq.html" data-nav="faq">よくある質問</a>
+      <a href="./line.html" class="header__line site-nav__line" data-line>LINEで先行販売</a>
     </nav>
-    <a href="{{ lineUrl }}" class="btn-line btn-line--nav site-header__line">LINEで相談</a>
+    <a href="./line.html" class="header__line site-header__line" data-line>LINEで先行販売</a>
   </div>
 </header>
 <div class="header-spacer" aria-hidden="true"></div>
-
-<main id="top">
-  <!-- Hero -->
+<main id="main">
   <section class="hero">
     <div class="hero__inner">
       <div class="hero__copy">
-        <p class="hero__eyebrow">Voice Trainer</p>
-        <h1 class="hero__title">声が変わると、<br>毎日が変わる。</h1>
-        <p class="hero__lead">ボイストレーナーの山田太郎です。歌はもちろん、話し声や人前でのスピーチまで。一人ひとりの声に合わせたレッスンで、あなたの「伝わる声」を育てます。(仮の紹介文です)</p>
+        <p class="hero__eyebrow"><span>INNER CARE</span><i></i><span>PRE-LAUNCH</span></p>
+        <h1 class="hero__title">毎日の土台を、<br>静かに整える。</h1>
+        <p class="hero__lead">知的労働の毎日に寄り添う、医師発想のインナーケア食品。ハイエンドコスメのような佇まいで、朝の習慣の起点をつくります。</p>
         <div class="hero__actions">
-          <a href="{{ lineUrl }}" class="btn-line btn-line--lg">LINEで体験レッスンに申し込む</a>
-          <a href="#service" class="btn-outline-light">サービスを見る</a>
+          <a href="./line.html" data-line class="btn-line-stack">
+            <span class="btn-line-stack__kicker">LINE限定・初回10%OFF</span>
+            <span class="btn-line-stack__label">公式LINEを友だち追加</span>
+          </a>
+          <a href="./product.html" class="btn-ghost">製品を見る</a>
         </div>
+        <dl class="hero__stats">
+          <div><dt>1日</dt><dd>2粒</dd></div>
+          <div><dt>内容量</dt><dd>30日</dd></div>
+          <div><dt>発想</dt><dd>医師</dd></div>
+        </dl>
       </div>
       <div class="hero__media">
-        <div class="hero__frame">
-          <div class="hero__frame-border"></div>
-          <img
-            class="hero__photo"
-            src="./images/hero-portrait.png"
-            alt="ボイストレーナー 山田太郎"
-            width="900"
-            height="1200"
-          >
-        </div>
+        <div class="hero__frame" aria-hidden="true"></div>
+        <div class="hero__pedestal"></div>
+        <img class="hero__photo hero__photo--product" src="./images/product-hero.png" alt="MAISON Daily Formulaのボトル" width="900" height="1200" fetchpriority="high">
+        <span class="stamp">Limited<br>Pre-launch</span>
+        <p class="hero__caption">one formula, daily ritual</p>
       </div>
     </div>
   </section>
 
-  <!-- Profile -->
-  <section id="profile" class="profile">
-    <div class="profile__inner">
-      <div class="profile__heading">
-        <p class="section-label">PROFILE</p>
-        <h2 class="section-title">プロフィール</h2>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>INNER CARE</span><span>UNISEX</span><span>PHYSICIAN FOUNDED</span><span>WARM LUXURY</span><span>DAILY RITUAL</span>
+      <span>INNER CARE</span><span>UNISEX</span><span>PHYSICIAN FOUNDED</span><span>WARM LUXURY</span><span>DAILY RITUAL</span>
+    </div>
+  </div>
+
+  <section class="gift" id="coupon">
+    <div class="gift__head reveal">
+      <p class="section-label">FIRST GIFT</p>
+      <h2 class="section-title">はじめての一本に、静かな特典を。</h2>
+      <p>派手な値引きではなく、友だち追加いただいた方へのご挨拶です。</p>
+    </div>
+    <a href="./coupon.html" class="ticket reveal">
+      <div class="ticket__side">
+        <span>MAISON</span>
+        <span>PRE-LAUNCH</span>
       </div>
-      <div class="profile__body">
-        <p>山田 太郎(やまだ たろう)。音楽大学声楽科を卒業後、劇団・合唱団での活動を経てボイストレーナーとして独立。現在は東京を拠点に、対面・オンラインでレッスンを行っています。(仮のプロフィール文です)</p>
-        <p>「声の悩みは、正しい練習で必ず変わる」をモットーに、初心者からプロ志望まで幅広く指導しています。</p>
+      <div class="ticket__body">
+        <p class="ticket__kicker">LINE友だち追加特典</p>
+        <p class="ticket__off"><em>10</em><span>%</span> OFF</p>
+        <p class="ticket__code"><span>CODE</span><b>MAISON10</b></p>
       </div>
+      <div class="ticket__tear">
+        <span>受け取る</span>
+        <small>初回購入まで</small>
+      </div>
+    </a>
+    <p class="gift__note">公式LINEでクーポンコードをお渡しします。他クーポンとの併用はできません。本製品は食品であり、医薬品ではありません。</p>
+  </section>
+
+  <section class="brand">
+    <div class="brand__intro reveal">
+      <p class="section-label">BRAND</p>
+      <h2 class="section-title">美容を、内側の習慣に。</h2>
+      <p class="brand__lead">MAISONは、メディカルとビューティーのあいだに立つインナーケアです。効能を叫ぶのではなく、毎日の土台を静かに整えることだけに専念しています。</p>
+      <p><a href="./brand.html" class="btn-ghost">ブランドストーリー</a></p>
+    </div>
+    <div class="cards">
+      <a href="./product.html" class="card reveal">
+        <img src="./images/product-hero.png" alt="Daily Formulaのボトル" width="900" height="1200" loading="lazy">
+        <span>PRODUCT</span>
+        <h3>Daily Formula</h3>
+        <p>1日2粒。香りも色も主張しない、ユニセックスな一本。</p>
+      </a>
+      <a href="./formula.html" class="card reveal">
+        <img src="./images/beauty-ingredients.png" alt="少数精鋭の成分イメージ" width="1200" height="900" loading="lazy">
+        <span>FORMULA</span>
+        <h3>少数の成分</h3>
+        <p>足すのではなく、整える。色数を絞った処方。</p>
+      </a>
+      <a href="./ritual.html" class="card reveal">
+        <img src="./images/beauty-ritual.png" alt="朝の水と一緒に摂る習慣" width="1200" height="900" loading="lazy">
+        <span>RITUAL</span>
+        <h3>朝の2粒</h3>
+        <p>場所に置けば、習慣になる。特別な儀式は不要です。</p>
+      </a>
     </div>
   </section>
 
-  <!-- Career -->
-  <section id="career" class="career">
-    <p class="section-label">CAREER</p>
-    <h2 class="section-title section-title--spaced">経歴・実績</h2>
-    <div class="career__list">
-      <sc-for list="{{ career }}" as="c" hint-placeholder-count="5">
-        <div class="career__item">
-          <div class="career__year">{{ c.year }}</div>
-          <div class="career__text">{{ c.text }}</div>
-        </div>
-      </sc-for>
+  <section class="voices">
+    <div class="voices__head reveal">
+      <p class="section-label">VOICES</p>
+      <h2 class="section-title">考える人の、静かな変化。</h2>
+      <p><a href="./voices.html" class="btn-ghost">声をもっと見る</a></p>
     </div>
-    <p class="note">※ 経歴は仮の内容です。実際の経歴に差し替えます。</p>
+    <div class="voices__grid">
+      <article class="voice reveal">
+        <p class="voice__text">会議が続く週でも、肌と頭の調子が同じラインに戻ってきた感覚があります。</p>
+        <p class="voice__who">経営者  /  42</p>
+      </article>
+      <article class="voice reveal">
+        <p class="voice__text">香りが主張しないので、オフィスのデスクに出しておけるのが気に入っています。</p>
+        <p class="voice__who">弁護士  /  38</p>
+      </article>
+      <article class="voice reveal">
+        <p class="voice__text">サプリらしい元気さではなく、整った感じ。朝の作業が静かになりました。</p>
+        <p class="voice__who">クリエイター  /  31</p>
+      </article>
+    </div>
+    <p class="voices__note">モニターの方の個人の感想です。効果を保証するものではありません。体験談はイメージです。</p>
   </section>
 
-  <!-- Activity -->
-  <section id="activity" class="activity">
-    <div class="activity__inner">
-      <p class="section-label">ACTIVITY</p>
-      <h2 class="section-title section-title--spaced">現在の活動内容</h2>
-      <div class="activity__grid">
-        <sc-for list="{{ activities }}" as="a" hint-placeholder-count="3">
-          <div class="activity__card">
-            <div class="activity__media">
-              <img src="{{ a.image }}" alt="{{ a.title }}" width="640" height="480" loading="lazy">
-            </div>
-            <div class="activity__body">
-              <div class="activity__num">{{ a.num }}</div>
-              <h3 class="activity__title">{{ a.title }}</h3>
-              <p class="activity__text">{{ a.text }}</p>
-            </div>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service -->
-  <section id="service" class="service">
-    <p class="section-label">SERVICE</p>
-    <h2 class="section-title section-title--spaced">サービス案内</h2>
-    <div class="service__grid">
-      <sc-for list="{{ services }}" as="s" hint-placeholder-count="3">
-        <div class="service__card">
-          <h3 class="service__title">{{ s.title }}</h3>
-          <div class="service__price">{{ s.price }}<span class="service__unit"> {{ s.unit }}</span></div>
-          <p class="service__text">{{ s.text }}</p>
-          <a href="{{ lineUrl }}" class="btn-outline-sm">LINEで申し込む</a>
-        </div>
-      </sc-for>
-    </div>
-    <p class="note">※ 料金・内容は仮のものです。</p>
-  </section>
-
-  <!-- YouTube / SNS -->
-  <section id="sns" class="sns">
-    <div class="sns__inner">
-      <div class="sns__youtube">
-        <p class="section-label">YOUTUBE</p>
-        <h2 class="section-title">YouTube</h2>
-        <div class="sns__embed">
-          <iframe src="{{ youtubeEmbed }}" title="YouTube" allowfullscreen="allowfullscreen"></iframe>
-        </div>
-        <p class="sns__channel"><a href="{{ youtubeUrl }}">チャンネルを見る →</a></p>
-      </div>
-      <div class="sns__links">
-        <p class="section-label">SNS</p>
-        <h2 class="section-title">SNS</h2>
-        <div class="sns__list">
-          <a href="{{ instagramUrl }}" class="sns__item">
-            <span class="sns__item-name">Instagram</span>
-            <span class="sns__item-desc">レッスン風景・日々の発信</span>
-          </a>
-          <a href="{{ lineUrl }}" class="sns__item">
-            <span class="sns__item-name">公式LINE</span>
-            <span class="sns__item-desc">お知らせ・予約受付</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <p class="section-label">CONTACT</p>
-    <h2 class="section-title section-title--contact">お問い合わせ</h2>
-    <p class="contact__lead">レッスンのお申し込み・ご相談は、公式LINEからお気軽にどうぞ。メールでのお問い合わせも受け付けています。</p>
-    <div class="contact__actions">
-      <a href="{{ lineUrl }}" class="btn-line btn-line--contact">LINEで問い合わせる</a>
-      <a href="{{ mailtoHref }}" class="btn-outline">メールを送る</a>
+  <section class="line-banner">
+    <div class="line-banner__inner reveal">
+      <p class="section-label">PRE-LAUNCH</p>
+      <h2>先行販売は、<br>公式LINEから。</h2>
+      <p>友だち追加で初回10%OFF。数量限定の先行案内と、入荷情報もお届けします。</p>
+      <a href="./line.html" data-line class="header__line header__line--lg">友だち追加する</a>
     </div>
   </section>
 </main>
-
 <footer class="site-footer">
-  <div class="site-footer__inner">
-    <span>© 2026 Taro Yamada</span>
-    <span class="site-footer__links">
-      <a href="{{ youtubeUrl }}">YouTube</a>
-      <a href="{{ instagramUrl }}">Instagram</a>
-      <a href="{{ lineUrl }}">LINE</a>
-    </span>
+  <div class="site-footer__grid">
+    <div>
+      <p class="site-logo__mark">MAISON</p>
+      <p class="site-footer__tag">Warm luxury, from within.</p>
+      <p class="site-footer__meta">株式会社MAISON<br>東京都港区南青山1-1-1</p>
+    </div>
+    <nav class="site-footer__nav" aria-label="フッター">
+      <a href="./brand.html" data-nav="brand">ブランド</a>
+      <a href="./product.html" data-nav="product">製品</a>
+      <a href="./formula.html" data-nav="formula">成分</a>
+      <a href="./ritual.html" data-nav="ritual">使い方</a>
+      <a href="./voices.html" data-nav="voices">声</a>
+      <a href="./faq.html" data-nav="faq">よくある質問</a>
+      <a href="./contact.html" data-nav="contact">お問い合わせ</a>
+      <a href="./coupon.html" data-nav="coupon">初回特典</a>
+    </nav>
+    <div class="site-footer__links">
+      <a href="https://www.instagram.com/maison.innercare/" data-instagram>Instagram</a>
+      <a href="./line.html" data-line>LINE</a>
+      <a href="mailto:hello@maison.jp" data-mail>Mail</a>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <p class="site-footer__legal">
+      <a href="./legal.html">特定商取引法に基づく表記</a>
+      <a href="./privacy.html">プライバシーポリシー</a>
+      <a href="./terms.html">利用規約</a>
+    </p>
+    <p class="site-footer__copy">© 2026 株式会社MAISON. All rights reserved.</p>
   </div>
 </footer>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;lineUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://lin.ee/xxxxxxx&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;リンク設定&quot;},&quot;youtubeUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.youtube.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;リンク設定&quot;},&quot;youtubeId&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;リンク設定&quot;},&quot;instagramUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.instagram.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;リンク設定&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;info@example.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;リンク設定&quot;}}">
-class Component extends DCLogic {
-  state = { menuOpen: false };
-
-  renderVals() {
-    const lineUrl = this.props.lineUrl ?? "https://lin.ee/xxxxxxx";
-    const youtubeUrl = this.props.youtubeUrl ?? "https://www.youtube.com/";
-    const youtubeId = this.props.youtubeId ?? "";
-    const menuOpen = !!this.state.menuOpen;
-    return {
-      lineUrl, youtubeUrl,
-      instagramUrl: this.props.instagramUrl ?? "https://www.instagram.com/",
-      mailtoHref: "mailto:" + (this.props.email ?? "info@example.com"),
-      youtubeEmbed: youtubeId ? "https://www.youtube.com/embed/" + youtubeId : "about:blank",
-      menuOpen: menuOpen ? "true" : "false",
-      headerClass: menuOpen ? "is-open" : "",
-      toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }),
-      closeMenu: () => { if (this.state.menuOpen) this.setState({ menuOpen: false }); },
-      career: [
-        { year: "2010年", text: "音楽大学 声楽科 卒業(仮)" },
-        { year: "2012年", text: "劇団に所属し、舞台・ミュージカルに出演(仮)" },
-        { year: "2016年", text: "ボイストレーナーとして独立、個人レッスンを開始(仮)" },
-        { year: "2020年", text: "オンラインレッスンを開始。累計指導人数500名を突破(仮)" },
-        { year: "2024年", text: "YouTubeチャンネル登録者1万人達成(仮)" },
-      ],
-      activities: [
-        { num: "01", title: "個人レッスン", text: "対面・オンラインでのマンツーマンレッスン。歌唱・話し声のどちらにも対応します。(仮)", image: "./images/activity-lesson.png" },
-        { num: "02", title: "セミナー・講座", text: "企業・学校向けの発声セミナーや、グループ講座を開催しています。(仮)", image: "./images/activity-seminar.png" },
-        { num: "03", title: "YouTube発信", text: "自宅でできるボイストレーニングの方法を動画で発信しています。(仮)", image: "./images/activity-youtube.png" },
-      ],
-      services: [
-        { title: "体験レッスン", price: "¥3,000", unit: "/ 60分", text: "初めての方向け。現在の声の状態を確認し、練習の方向性をご提案します。" },
-        { title: "個人レッスン", price: "¥6,000", unit: "/ 60分", text: "マンツーマンの継続レッスン。対面(東京)またはオンラインをお選びいただけます。" },
-        { title: "月謝コース", price: "¥20,000", unit: "/ 月4回", text: "しっかり上達したい方向けの月謝制コース。LINEでの練習サポート付き。" },
-      ],
-    };
-  }
-}
-</script>
+<script src="./site.js"></script>
 </body>
 </html>
